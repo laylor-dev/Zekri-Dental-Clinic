@@ -30,14 +30,11 @@ export function Navbar() {
           {/* Text removed as per request */}
         </div>
         <div className="flex space-x-6">
-          <a href="tel:+2130550420401" className="flex items-center hover:text-white cursor-pointer transition-colors">
-            <Phone size={12} className="mr-2 text-primary" /> 0550 42 04 01
-          </a>
-          <a href="tel:+2130771501788" className="flex items-center hover:text-white cursor-pointer transition-colors">
-            <Phone size={12} className="mr-2 text-primary" /> 0771 50 17 88
+          <a href="tel:+213020509162" className="flex items-center hover:text-white cursor-pointer transition-colors">
+            <Phone size={12} className="mr-2 text-primary" /> 020 50 91 62
           </a>
           <a
-            href="https://maps.app.goo.gl/769qEHWhzLG6NJvV9"
+            href="https://maps.app.goo.gl/ouledyaichblida"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center hover:text-white cursor-pointer transition-colors"
@@ -53,12 +50,12 @@ export function Navbar() {
         <a href="#" className="flex items-center gap-3 cursor-pointer group">
           <img 
             src="/Assets/logo.png" 
-            alt="Les Mains d'Or Logo" 
+            alt="Zekri Dental Clinic Logo" 
             className="h-10 w-auto lg:h-12 transition-transform duration-300 group-hover:scale-105"
           />
           <div className="flex flex-col">
             <span className="font-serif text-xl lg:text-2xl tracking-widest text-brand-darker leading-none group-hover:text-primary transition-colors duration-300">
-              Les Mains d'Or
+              Zekri Dental Clinic
             </span>
           </div>
         </a>
@@ -138,8 +135,8 @@ export function Navbar() {
               </a>
             ))}
             <div className="flex gap-3 pt-2">
-              <a href="tel:+2130550420401" className="flex-1">
-                <Button variant="outline" className="w-full !text-xs">{t('call')}: 0550 42 04 01</Button>
+              <a href="tel:+213020509162" className="flex-1">
+                <Button variant="outline" className="w-full !text-xs">{t('call')}: 020 50 91 62</Button>
               </a>
               <Button variant="primary" className="flex-1 !text-xs">{t('nav_book_short')}</Button>
             </div>

@@ -11,7 +11,7 @@ export function LogoLoader({ exiting = false }: LogoLoaderProps) {
           viewBox="0 0 220 220"
           className="w-36 h-36 sm:w-44 sm:h-44"
           role="img"
-          aria-label="Loading Les Mains d'Or"
+          aria-label="Loading Zekri Dental Clinic"
         >
           <defs>
             <linearGradient id="loaderRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -59,8 +59,8 @@ export function LogoLoader({ exiting = false }: LogoLoaderProps) {
         </svg>
 
         <div className="text-center">
-          <p className="font-serif text-brand-dark text-xl sm:text-2xl tracking-wide logo-loader-title">Les Mains d&apos;Or</p>
-          <p className="text-primary text-[11px] sm:text-xs tracking-[0.32em] uppercase mt-1">Loading Experience</p>
+          <p className="font-serif text-brand-dark text-xl sm:text-2xl tracking-wide logo-loader-title">Zekri Dental Clinic</p>
+          <p className="text-primary text-[11px] sm:text-xs tracking-[0.32em] uppercase mt-1">عيادة زكري لطب الأسنان</p>
         </div>
       </div>
     </div>

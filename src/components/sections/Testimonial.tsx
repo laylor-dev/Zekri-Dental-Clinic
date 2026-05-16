@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { Quote } from 'lucide-react';
 import { useLang } from '../../i18n/LanguageContext';
 
@@ -11,9 +11,9 @@ export function Testimonial() {
         {/* Left image panel */}
         <div className="relative min-h-[380px] sm:min-h-[420px] lg:min-h-[720px]">
           <img
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80"
+            src="/Assets/testimonial_img.png"
             alt="Patiente satisfaite"
-            className="w-full h-full object-cover object-center grayscale"
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-darker/25 via-transparent to-transparent lg:hidden" />
         </div>

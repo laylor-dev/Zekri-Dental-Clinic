@@ -3,7 +3,7 @@ import { Button } from '../ui/Button';
 import { useLang } from '../../i18n/LanguageContext';
 
 export function Intro() {
-  const { t, isRTL } = useLang();
+  const { t, lang, isRTL } = useLang();
 
   return (
     <section id="about" className="py-24 lg:py-40 px-6 lg:px-12 bg-brand-light relative overflow-hidden flex items-center justify-center">
@@ -48,9 +48,9 @@ export function Intro() {
           {/* Micro stats */}
           <div className={`flex gap-8 mb-10 ${isRTL ? 'flex-row-reverse' : ''}`}>
             {[
-              { num: '136K', label: isRTL ? 'متابع' : 'Abonnés' },
-              { num: '500+', label: isRTL ? 'حالة' : 'Cas traités' },
-              { num: '✨', label: isRTL ? 'زيركون فاخر' : 'Zircone Premium' },
+              { num: '#1', label: isRTL ? 'وجهة الزيركون' : lang === 'en' ? 'Zirconia Dest.' : 'Destination Zircone' },
+              { num: '500+', label: isRTL ? 'حالة' : lang === 'en' ? 'Cases Treated' : 'Cas traités' },
+              { num: '🏆', label: isRTL ? 'أكبر عيادة' : lang === 'en' ? 'Largest Clinic' : 'Plus Grande Clinique' },
             ].map((stat) => (
               <div key={stat.num} className="flex flex-col">
                 <span className="font-serif text-2xl text-primary font-semibold">{stat.num}</span>
@@ -64,38 +64,41 @@ export function Intro() {
           </Button>
         </motion.div>
 
-        {/* Right Asymmetrical Images Block */}
+        {/* Right: Clinic Welcome Video */}
         <div className="w-full lg:w-1/2 relative h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center mt-10 md:mt-16 lg:mt-0">
-          {/* Main Large Image */}
+          {/* Main Video — clinic welcome tour */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className={`w-[75%] h-[80%] absolute ${isRTL ? 'left-0' : 'right-0'} top-0 overflow-hidden group shadow-2xl`}
+            className={`w-[75%] h-[80%] absolute ${isRTL ? 'left-0' : 'right-0'} top-0 overflow-hidden shadow-2xl`}
           >
-            <img
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80"
-              alt="Les Mains d'Or Clinic"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+            <video
+              src="/Assets/clinic_welcome.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
             />
             {/* Gold corner accent */}
             <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-primary/60" />
             <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-primary/60" />
           </motion.div>
 
-          {/* Smaller overlapping Image */}
+          {/* Smaller overlapping image */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            className={`w-[42%] aspect-[3/4] absolute ${isRTL ? 'right-0' : 'left-0'} bottom-10 z-10 border-4 md:border-8 border-brand-light shadow-2xl overflow-hidden group bg-brand-light`}
+            className={`w-[42%] absolute ${isRTL ? 'right-0' : 'left-0'} bottom-10 z-10 border-4 md:border-8 border-brand-light shadow-2xl overflow-hidden bg-brand-light group flex items-center justify-center`}
           >
             <img
-              src="/Assets/results_small.png"
-              alt="Les Mains d'Or Results"
-              className="w-full h-full object-contain object-center transition-transform duration-1000"
+              src="/Assets/intro_small.png"
+              alt="Zekri Dental Clinic Care"
+              className="w-full h-auto block transition-transform duration-1000 group-hover:scale-105"
             />
           </motion.div>
 

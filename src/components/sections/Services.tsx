@@ -77,7 +77,9 @@ function ServiceCard({
       <img
         src={img}
         alt={service.title}
-        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-50 group-hover:opacity-75 grayscale lg:grayscale-0 lg:saturate-50 group-hover:saturate-100"
+        className={`w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-50 group-hover:opacity-75 grayscale lg:grayscale-0 lg:saturate-50 group-hover:saturate-100 ${
+          img.includes('whitening') ? 'object-[center_80%]' : 'object-center'
+        }`}
       />
 
       {/* Gradient */}
